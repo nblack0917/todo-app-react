@@ -46,7 +46,7 @@ class App extends Component {
             <button type="submit">Submit</button>
           </form>
           <ol>{this.state.listOfTodos.map((todo, index) => {
-            return <TodoCard key={index} index={index} title={todo} clickToRemove={this.deleteItem} />
+            return <TodoCard key={todo+index} index={index} title={todo} clickToRemove={this.deleteItem} />
           })}</ol>
           <button onClick={this.handleClick}>Click Me!</button>
           <p>
